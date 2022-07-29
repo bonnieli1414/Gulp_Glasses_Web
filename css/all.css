@@ -297,6 +297,9 @@ footer .contact li {
     gap: 11px;
   }
 }
+footer .contact a {
+  color: #fff;
+}
 footer .copyright {
   display: flex;
   justify-content: space-between;
