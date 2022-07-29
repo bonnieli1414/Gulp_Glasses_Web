@@ -1,0 +1,15 @@
+/* CSS reset */
+@import "reset";
+
+/*套件引入*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+/* Configuration */
+@import "variables";
+@import "mixins";
+@import "media";
+
+/* 全站設定 */
+@import "layout";
+@import "root";

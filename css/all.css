@@ -1,0 +1,344 @@
+@charset "UTF-8";
+/* CSS reset */ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*套件引入*/
+/* Configuration */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 
+    讓圖片依照螢幕大小自動調整並置中
+    減少圖片下方不明空隙
+*/
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/*
+    文字對SEO的影響力大於圖片，
+    h1若要改放置圖片，可在h1標籤@include image-replaces-text;
+    以下是優化圖片SEO技巧
+*/
+/*
+    製作 ham-menu
+*/
+/* 全站設定 */
+body {
+  font-family: "Roboto", sans-serif, "Noto Sans TC";
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+header {
+  background-color: #AA0601;
+  position: relative;
+}
+header .container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 16px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .glasses-logo {
+  height: 50px;
+}
+header .glasses-logo:hover {
+  opacity: 0.7;
+}
+header .ham-toggle {
+  visibility: hidden;
+}
+header .menu-list {
+  display: flex;
+  gap: 64px;
+  font-size: 20px;
+  line-height: 30px;
+}
+header .menu-list a {
+  color: #fff;
+}
+header .menu-list a:hover {
+  color: #c8c8ec;
+}
+
+/*
+    ham-menu
+*/
+@media screen and (max-width: 767px) {
+  /*
+      先製作 ham-menu 
+  */
+  .ham-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    background: #AA0601;
+  }
+  /*
+      製作 ham-menu外框做相對定位
+  */
+  .ham-frame {
+    position: relative;
+    top: 50%;
+  }
+  /*
+      製作 ham-menu 三根技巧
+  */
+  .ham-bar {
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    position: absolute;
+    left: 5px;
+  }
+  .ham-bar--top {
+    transform: translateY(-7px);
+  }
+  .ham-bar--bottom {
+    transform: translateY(7px);
+  }
+  /*
+      製作 ham-menu checked後圖形變成打叉圖示
+  */
+  .ham-toggle:checked ~ .ham-menu .ham-frame .ham-bar--middle {
+    opacity: 0;
+  }
+  .ham-toggle:checked ~ .ham-menu .ham-frame .ham-bar--top {
+    transform: rotate(-45deg);
+  }
+  .ham-toggle:checked ~ .ham-menu .ham-frame .ham-bar--bottom {
+    transform: rotate(45deg);
+  }
+  .header-menu {
+    width: 100%;
+    text-align: center;
+    background-color: #AA0601;
+    position: absolute;
+    top: 82px;
+    left: 0%;
+    transform: translateY(-200%);
+    transition: transform 0.5s;
+  }
+  .ham-toggle:checked ~ .header-menu {
+    transform: none;
+  }
+  .menu-list {
+    display: block;
+    flex-direction: column;
+  }
+  .menu-list .menu-link {
+    width: 100%;
+    padding: 12px 0;
+  }
+  header .container .menu-list {
+    gap: 0px;
+  }
+  .menu-item {
+    border: 1px solid #fff;
+  }
+}
+footer {
+  background-color: #AA0601;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+footer .container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 60px 12px 32px 12px;
+}
+@media screen and (max-width: 767px) {
+  footer .container {
+    padding: 24px 14px;
+  }
+}
+footer .footer-content {
+  border-bottom: 1px solid #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  footer .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: start;
+    gap: 8px 0;
+    padding-bottom: 32px;
+  }
+}
+footer .footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .webmap-list {
+  display: flex;
+  gap: 48px;
+}
+@media screen and (max-width: 767px) {
+  footer .webmap-list {
+    display: none;
+  }
+}
+footer .webmap-list .webmap-link {
+  color: #fff;
+}
+footer .social-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+@media screen and (max-width: 767px) {
+  footer .social-list {
+    gap: 8px;
+  }
+}
+footer .social-list img {
+  width: 48px;
+  height: 48px;
+}
+@media screen and (max-width: 767px) {
+  footer .social-list img {
+    width: 24px;
+    height: 24px;
+  }
+}
+footer .contact {
+  font-size: 36px;
+  line-height: 54px;
+  padding: 36px 0 32px 0;
+  gap: 8px 0;
+}
+@media screen and (max-width: 767px) {
+  footer .contact {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0px;
+  }
+}
+footer .contact li {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+@media screen and (max-width: 767px) {
+  footer .contact li {
+    gap: 11px;
+  }
+}
+footer .copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+}
+@media screen and (max-width: 767px) {
+  footer .copyright {
+    display: block;
+    padding-top: 16px;
+    gap: 8px 0px;
+  }
+}
+footer .copyright ul {
+  display: flex;
+  gap: 48px;
+}
+@media screen and (max-width: 767px) {
+  footer .copyright ul {
+    display: block;
+  }
+}
+
+h1 a {
+  /*
+  background讓背景圖片隨著螢幕大小自適應
+  */
+  background-image: url("../image/storepage-1.png");
+  max-width: 1296px;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /*
+  強迫文字縮排至原本的區域外
+  */
+  text-indent: 101%;
+  /*
+  不進行換行
+  */
+  white-space: nowrap;
+  /*
+  將超出範圍的內容隱藏
+  */
+  overflow: hidden;
+}/*# sourceMappingURL=all.css.map */
