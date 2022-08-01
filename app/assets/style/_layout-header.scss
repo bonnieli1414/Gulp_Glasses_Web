@@ -1,0 +1,38 @@
+header {
+    background-color: $header-primary-background-color;
+    position: relative;
+    .container {
+        max-width: $desktop-width;
+        margin: 0 auto;
+        padding: 16px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .glasses-logo {
+        height: 50px;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    .ham-toggle {
+        visibility: hidden;
+    }
+    .list-menu {
+        display: flex;
+        gap: 64px;
+        font-size: 20px;
+        line-height: 30px;
+        a {
+            color: $nav-menu-text-color;
+            &:hover {
+                color: $nav-menu-text-color--hover;
+            }
+        }
+    }
+}
+
+// ham-menu
+@media screen and (max-width: $mobile-width) {
+    @include ham-menu;
+}
