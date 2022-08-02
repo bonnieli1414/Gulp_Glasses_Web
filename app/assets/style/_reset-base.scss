@@ -17,16 +17,22 @@ a {
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+@mixin banner {
+    // background讓背景圖片隨著螢幕大小自適應
+    background-image: url("../image/home-header.png");
+    padding-top: 787px / 1920px * 100%;
+    background-size: cover;
+    background-position: center center;
+}
+// .banner {
+//     @include banner;
+// }
+
 // 文字對SEO的影響力大於圖片，
 // h1若要改放置圖片，可在h1標籤@include image-replaces-text;
 // 以下是優化圖片SEO技巧
 @mixin image-replaces-text {
-    // background讓背景圖片隨著螢幕大小自適應
-    background-image: url("../image/home-header.png");
-    max-width: 100%;
-    height: 787px;
-    background-size: cover;
-    background-position: center center;
     background-repeat: no-repeat;
     // 強迫文字縮排至原本的區域外
     text-indent: 101%;
@@ -36,5 +42,6 @@ body {
     overflow: hidden;
 }
 // h1 {
+//     @include banner;
 //     @include image-replaces-text;
 // }

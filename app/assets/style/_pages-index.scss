@@ -1,0 +1,29 @@
+.index {
+    color: #650300;
+    .banner {
+        @include banner;
+        position: relative;
+    }
+    .container-lg {
+        max-width: $desktop-width;
+        margin: 0 auto;
+        height: 787px;
+        padding: 0px 12px;
+        display: flex;
+    }
+    .fxd-c {
+        flex-direction: column;
+        
+    }
+    .ai-fe {
+        align-items: flex-end;
+    }
+    .pos-a{
+        position: absolute;
+        top: 33%;
+        right: 0%;
+    }
+
+
+
+}

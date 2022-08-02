@@ -1,19 +1,19 @@
 // CSS reset
-@import "reset";
-@import "base";
+@import "reset-meyerweb";
+@import "reset-base";
 
 // 套件
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
 
 // Configuration
-@import "variables";
-@import "mixins";
+@import "config-variables";
+@import "config-mixins";
 
 // 全站設定
-@import "root";
+@import "layout-root";
 @import "layout-header";
 @import "layout-footer";
 
 // pages
-@import "index"
+@import "pages-index"
