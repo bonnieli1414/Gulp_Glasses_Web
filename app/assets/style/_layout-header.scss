@@ -6,6 +6,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include pad {
+            padding: 16px 36px;
+        }
     }
     .logo {
         height: 50px;
