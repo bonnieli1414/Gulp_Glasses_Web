@@ -75,9 +75,6 @@ p{
 .text-style-bright{
     color: #AA0601;
 }
-.md-px-16{
-    @include pad{
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+.px-16-py-16_8 {
+    padding: 16px 16px 8px;
 }

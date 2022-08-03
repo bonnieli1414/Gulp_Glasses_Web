@@ -22,9 +22,10 @@ body {
     // background讓背景圖片隨著螢幕大小自適應
     // background-image: url("../image/home-header.png");
     // padding-top: 787px / 1920px * 100%;
-    width: 100%;
+    // width: 100%;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
 }
 // .banner {
 //     @include banner;

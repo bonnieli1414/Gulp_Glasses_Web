@@ -167,11 +167,8 @@ p {
   color: #AA0601;
 }
 
-@media screen and (max-width: 992px) {
-  .md-px-16 {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+.px-16-py-16_8 {
+  padding: 16px 16px 8px;
 }
 
 header {
@@ -411,19 +408,18 @@ footer .copyright a:hover {
 }
 .index .banner-header {
   background-image: url("../image/home-header.png");
-  padding-top: 40.9895833333%;
-  width: 100%;
+  height: 787px;
   background-size: cover;
   background-position: center center;
-  position: relative;
+  background-repeat: no-repeat;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   .index .banner-header {
     background-image: url("../image/home-header-sm.png");
-    padding-top: 102.4739583333%;
-    width: 100%;
+    height: 396px;
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 .index .banner-header .container {
@@ -431,10 +427,8 @@ footer .copyright a:hover {
   height: 787px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
-  position: absolute;
-  top: 35%;
-  right: 0%;
 }
 @media screen and (max-width: 992px) {
   .index .banner-header .container {
@@ -443,6 +437,7 @@ footer .copyright a:hover {
 }
 @media screen and (max-width: 767px) {
   .index .banner-header .container {
+    height: 396px;
     padding: 0px 14px;
   }
 }
@@ -534,9 +529,9 @@ footer .copyright a:hover {
 }
 .index .banner-content {
   background-image: url("../image/index-bg.png");
-  width: 100%;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .index .banner-color-style {
   color: #fff;
@@ -565,6 +560,11 @@ footer .copyright a:hover {
 @media screen and (max-width: 767px) {
   .index .card {
     width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .index .card-top {
     margin: 0 auto;
   }
 }
