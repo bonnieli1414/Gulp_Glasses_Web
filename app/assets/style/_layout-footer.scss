@@ -4,8 +4,6 @@ footer {
     font-size: 16px;
     line-height: 24px;
     .container {
-        max-width: $desktop-width;
-        margin: 0 auto;
         padding: 60px 12px 32px 12px;
         @include mobile {
             padding: 24px 14px;
@@ -90,6 +88,12 @@ footer {
             @include mobile {
                 display: block;
             }
+        }
+        a {
+            color: $nav-menu-text-color;
+        }
+        a:hover {
+            color: $nav-menu-text-color--hover;
         }
     }
 }
