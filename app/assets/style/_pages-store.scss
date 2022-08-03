@@ -1,0 +1,57 @@
+.store {
+    .store-img {
+        width: 526px;
+        @include pad {
+            width: 337px;
+        }
+        @include mobile {
+            width: 348;
+        }
+    }
+    .select {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .select-style {
+        border: 1px solid #CED4DA;
+        width: 304px;
+        height: 38px;
+        padding: 6px 0 6px 12px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .info {
+        display: flex;
+        gap: 24px;
+        @include pad {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .map-text {
+        @include pad {
+            display: flex;
+            gap: 24px;
+        }
+
+    }
+    .map-text-item {
+        color: #000;
+        display: flex;
+        align-items: center;
+    }
+    .bd-card {
+        border: 1px solid #00000020;
+        padding-left: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .gmap {
+        width: 746px;
+        height: 414px;
+        // background: #000;
+    }
+}
