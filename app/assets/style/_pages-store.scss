@@ -2,10 +2,13 @@
     .store-img {
         width: 526px;
         @include pad {
-            width: 337px;
+            width: 50%;
+            height: 224px;
+            margin: 0 auto;
         }
         @include mobile {
-            width: 348;
+            height: 224px;
+            
         }
     }
     .select {
@@ -33,14 +36,22 @@
     .map-text {
         @include pad {
             display: flex;
-            gap: 24px;
+            gap: 16px;
+            @include mobile {
+                flex-direction: column;
+            }
         }
-
     }
     .map-text-item {
         color: #000;
         display: flex;
         align-items: center;
+    }
+    .box {
+        @include pad {
+            width: 50%;
+            margin: 0 auto;
+        }
     }
     .bd-card {
         border: 1px solid #00000020;
@@ -49,9 +60,22 @@
         flex-direction: column;
     }
     
-    .gmap {
-        width: 746px;
-        height: 414px;
-        // background: #000;
+    .map-google {
+        padding-top: 16px;
+        @include pad {
+            margin: 0 auto;
+        }
+    }
+    .map-google-width{
+        max-width: 746px;
+        @include pad {
+            max-width: 817px;
+        }
+    }
+    .bd-8 {
+        border-left: 8px solid #9F1213;
+    }
+    .pl-16 {
+        padding-left: 16px;
     }
 }

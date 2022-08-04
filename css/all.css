@@ -183,6 +183,14 @@ p {
   padding: 16px 16px 8px;
 }
 
+.pt-96 {
+  padding-top: 96px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
 header {
   background-color: #AA0601;
   position: relative;
@@ -654,12 +662,14 @@ footer .copyright a:hover {
 }
 @media screen and (max-width: 992px) {
   .store .store-img {
-    width: 337px;
+    width: 50%;
+    height: 224px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 767px) {
   .store .store-img {
-    width: 348;
+    height: 224px;
   }
 }
 .store .select {
@@ -688,7 +698,12 @@ footer .copyright a:hover {
 @media screen and (max-width: 992px) {
   .store .map-text {
     display: flex;
-    gap: 24px;
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 767px) {
+  .store .map-text {
+    flex-direction: column;
   }
 }
 .store .map-text-item {
@@ -696,13 +711,37 @@ footer .copyright a:hover {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 992px) {
+  .store .box {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 .store .bd-card {
   border: 1px solid rgba(0, 0, 0, 0.1254901961);
   padding-left: 24px;
   display: flex;
   flex-direction: column;
 }
-.store .gmap {
-  width: 746px;
-  height: 414px;
+.store .map-google {
+  padding-top: 16px;
+}
+@media screen and (max-width: 992px) {
+  .store .map-google {
+    margin: 0 auto;
+  }
+}
+.store .map-google-width {
+  max-width: 746px;
+}
+@media screen and (max-width: 992px) {
+  .store .map-google-width {
+    max-width: 817px;
+  }
+}
+.store .bd-8 {
+  border-left: 8px solid #9F1213;
+}
+.store .pl-16 {
+  padding-left: 16px;
 }/*# sourceMappingURL=all.css.map */
