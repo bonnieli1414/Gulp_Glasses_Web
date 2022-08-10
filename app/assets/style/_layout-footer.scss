@@ -98,11 +98,11 @@ footer {
                 display: block;
             }
         }
-        a {
-            color: $nav-menu-text-color;
-        }
-        a:hover {
-            color: $nav-menu-text-color--hover;
-        }
+    }
+    a {
+        color: $nav-menu-text-color;
+    }
+    a:hover {
+        color: $nav-menu-text-color--hover;
     }
 }
