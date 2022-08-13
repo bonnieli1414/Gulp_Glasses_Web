@@ -375,10 +375,10 @@ footer {
       @media screen and (max-width: 767px) {
         footer .copyright ul {
           display: block; } }
-    footer .copyright a {
-      color: #fff; }
-    footer .copyright a:hover {
-      color: #c8c8ec; }
+  footer a {
+    color: #fff; }
+  footer a:hover {
+    color: #c8c8ec; }
 
 .index {
   color: #650300; }
@@ -686,7 +686,7 @@ footer {
 
 .map-google {
   padding-top: 16px;
-  width: 50%; }
+  width: 58.33%; }
   @media screen and (max-width: 992px) {
     .map-google {
       width: 100%; } }
