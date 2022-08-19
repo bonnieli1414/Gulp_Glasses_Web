@@ -1,5 +1,12 @@
+header {
+    // 漢堡選單要加上此設定，避免漢堡選單可以透視下一層
+    position: relative;
+    z-index: 2;
+}
 body {
     font-family: 'Roboto', sans-serif, 'Noto Sans TC';
+    position: relative;
+    z-index: 1;
 }
 a:hover{
     opacity: 0.8;
