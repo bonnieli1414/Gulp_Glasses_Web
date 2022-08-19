@@ -63,8 +63,14 @@ a {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif; }
 
+header {
+  position: relative;
+  z-index: 2; }
+
 body {
-  font-family: 'Roboto', sans-serif, 'Noto Sans TC'; }
+  font-family: 'Roboto', sans-serif, 'Noto Sans TC';
+  position: relative;
+  z-index: 1; }
 
 a:hover {
   opacity: 0.8; }
@@ -122,6 +128,9 @@ p {
       max-width: 767px;
       margin: 0 auto;
       padding: 0px 14px; } }
+
+.text-white {
+  color: #fff; }
 
 .py-8 {
   padding: 8px 0; }
