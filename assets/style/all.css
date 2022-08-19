@@ -66,6 +66,9 @@ body {
 body {
   font-family: 'Roboto', sans-serif, 'Noto Sans TC'; }
 
+a:hover {
+  opacity: 0.8; }
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
 
@@ -187,6 +190,8 @@ header {
       color: #fff; }
     header .list-menu a:hover {
       color: #c8c8ec; }
+  header .cursor-pointer {
+    cursor: pointer; }
 
 @media screen and (max-width: 767px) {
   .ham-menu {
